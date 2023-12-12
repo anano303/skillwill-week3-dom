@@ -4,18 +4,23 @@ body {
   justify-content: center;
 }
 #score {
-  width: 80px;
+  font-weight: bold;
+  font-size: 20px;
+  width: 90px;
   border-radius: 50%;
   height: 50px;
   background-color: blue;
   text-align: center;
   padding-top: 25px;
-  margin-top: 20px;
+  box-shadow: 0 0 50px aliceblue;
+
+  transform: translateX(450%) translateY(-400%);
 }
 button {
   background-color: aqua;
-  padding: 10px;
+  padding: 15px;
   border-radius: 5px;
+  border: groove;
   color: rgb(80, 38, 146);
   box-shadow: 0 0 50px blue;
 }
@@ -24,7 +29,18 @@ button {
   width: 500px;
   background-color: rgb(178, 24, 225);
   border-radius: 2%;
-  padding: 20px 20px;
+  padding: 30px 30px;
   display: flex;
   flex-direction: column;
+}
+#submit {
+  background-color: rgb(3, 63, 63);
+  width: 100%;
+  height: 50px;
+  border-radius: 3px;
+  border: none;
+  box-shadow: 0 5px 50px rgb(34, 34, 40);
+  color: rgb(179, 204, 225);
+  font-weight: bold;
+  font-size: larger;
 }

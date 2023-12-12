@@ -23,19 +23,21 @@
 
 let score = 0;
 const btns = document.querySelectorAll("button");
+let seen = {};
 
 btns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
+    if (seen[+btn.dataset.question]) {
+      return;
+    }
+    seen[+btn.dataset.question] = true;
+
     if (btn.id.includes("correct")) {
       score += 2;
       updateScore();
       btn.style.backgroundColor = "green";
     } else {
       btn.style.backgroundColor = "red";
-
-      setTimeout(() => {
-        btn.style.backgroundColor = "";
-      }, 1000);
     }
   });
 });
@@ -44,4 +46,10 @@ function updateScore() {
   if (scoreElement) {
     scoreElement.textContent = `Score: ${score}`;
   }
+}
+function resetAndRefresh() {
+  score = 0;
+  seen = {};
+  updateScore();
+  location.reload();
 }

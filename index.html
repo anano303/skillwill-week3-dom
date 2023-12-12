@@ -17,29 +17,32 @@
     <div class="box">
         <div id="quest1">
             <h1>რა ჰქვია ლომის შვილს? </h1>
-            <button id="no">1. ლეკვი</button>
-            <button id="correct">2. ბოკვერი</button>
-            <button id="no">3. კნუტი</button>
+            <button data-question="1" id="no">1. ლეკვი</button>
+            <button data-question="1" id="correct">2. ბოკვერი</button>
+            <button data-question="1" id="no">3. კნუტი</button>
         </div>
         <div id="quest2">
             <h1>რა ჰქვია ძაღლის შვილს? </h1>
-            <button id="no">1.ჭიანჭველა </button>
-            <button id="no">2. ბოკვერი</button>
-            <button id="correct">3. ლეკვი</button>
+            <button data-question="2" id="no">1.ჭიანჭველა </button>
+            <button data-question="2" id="no">2. ბოკვერი</button>
+            <button data-question="2" id="correct">3. ლეკვი</button>
         </div>
         <div id="quest3">
             <h1>რა ჰქვია კატის შვილს? </h1>
-            <button id="no">1. ჩოჩორი</button>
-            <button id="no">2. ბოკვერი</button>
-            <button id="correct">3. კნუტი</button>
+            <button data-question="3" id="no">1. ჩოჩორი</button>
+            <button data-question="3" id="no">2. ბოკვერი</button>
+            <button data-question="3" id="correct">3. კნუტი</button>
         </div>
         <div id="quest4">
             <h1>რა ჰქვია ვირის შვილს? </h1>
-            <button id="no">1. ლეკვი</button>
-            <button id="no">2. ბოკვერი</button>
-            <button id="correct">3. ჩოჩორი</button>
+            <button data-question="4" id="no">1. ლეკვი</button>
+            <button data-question="4" id="no">2. ბოკვერი</button>
+            <button data-question="4" id="correct">3. ჩოჩორი</button>
         </div>
-        <div id="score">Score: 0</div>
+        <form onsubmit="resetAndRefresh()">
+            <div id="score">Score: 0</div>
+            <input type="submit" value="Submit" id="submit">
+        </form>
     </div>
 
     <script src="script.js"></script>
