@@ -20,3 +20,29 @@
 // aEl.append(textEl2);
 // divEl.append(h2El, aEl);
 // document.body.append(divEl);
+
+let score = 0;
+const btns = document.querySelectorAll("button");
+
+btns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    if (btn.id.includes("correct")) {
+      score += 2;
+      updateScore();
+      btn.style.backgroundColor = "green";
+    } else {
+      btn.style.backgroundColor = "red";
+
+      // Optionally, remove red color after a short delay (e.g., 1000 milliseconds)
+      setTimeout(() => {
+        btn.style.backgroundColor = "";
+      }, 1000);
+    }
+  });
+});
+function updateScore() {
+  const scoreElement = document.getElementById("score");
+  if (scoreElement) {
+    scoreElement.textContent = `Score: ${score}`;
+  }
+}

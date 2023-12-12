@@ -1,0 +1,16 @@
+#score {
+  width: 80px;
+  border-radius: 50%;
+  height: 50px;
+  background-color: blue;
+  text-align: center;
+  padding-top: 25px;
+  margin-top: 20px;
+}
+button {
+  background-color: aqua;
+  padding: 10px;
+  border-radius: 5px;
+  color: rgb(80, 38, 146);
+  box-shadow: 0 0 50px blue;
+}
