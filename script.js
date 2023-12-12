@@ -33,7 +33,6 @@ btns.forEach((btn) => {
     } else {
       btn.style.backgroundColor = "red";
 
-      // Optionally, remove red color after a short delay (e.g., 1000 milliseconds)
       setTimeout(() => {
         btn.style.backgroundColor = "";
       }, 1000);
